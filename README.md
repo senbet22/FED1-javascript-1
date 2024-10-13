@@ -25,7 +25,7 @@ I used the following in this project:
 ## Credits:
 
 ## Recources
-I had just come back from  backpacking trip in Asia, so the color choices were inspired from that, also used my own images in About us Page.
+I had just come back from  backpacking trip in Asia, so the color choices were inspired from that, also used my own images in About Page.
 
 
 
