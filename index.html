@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainydays</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="settings.js"></script>
+</head>
+
+<body>
+
+    <!--Blue navigationbar-->
+    <nav class="navbar-one flex" id="navbar-one">
+        <div class="gradient">
+        </div>
+        <div class="logo flex">
+            <a href="index.html"><img src="images/RainyDays_Logo.png"></a>
+        </div>
+    </nav>
+
+    <!--Orange navigationbar-->
+    <nav class="navbar-second flex" id="navbar-second">
+
+        <div class="nav-links">
+
+            <input type="checkbox" id="hamburger">
+
+            <label for="hamburger">
+                <div class="ham-container">
+                    <div class="line" id="active"></div>
+                </div>
+            </label>
+            <ul class="flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="navbar-icons flex">
+            <div class="magnifying-glass">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Bestseller section-->
+    <div class="top-info">
+        <h1>Pushing The Comfort Zone</h1>
+    </div>
+    <div class="filter">
+        <select id="list">
+            <option value=" default">all jackets</option>
+            <option value="female">Women's</option>
+            <option value="male">Men's</option>
+        </select>
+    </div>
+
+    <section class="home">
+        <div class="loader"></div>
+        <template id="product">
+            <div class="row">
+                <a href="#" id="jacket-api">
+                    <img id="jacket-img" src="images/model9.jpg" alt="">
+                    <div class="product-text">
+                        <h2>Light Feather</h2>
+                    </div>
+                    <div class="detail">
+                        <h3></h3>
+                        <p>$169.00</p>
+                    </div>
+                </a>
+                <button id="cart-button-id" class="btn-add-to-cart">Add to Cart</button>
+
+            </div>
+        </template>
+
+
+
+        <div class="products">
+
+        </div>
+
+    </section>
+
+
+
+    <div class="cart-tab">
+        <p class="cart-title">Shopping Cart</p>
+        <div class="list-cart">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <template id="cart-item-template">
+                    <tr class="cart-item">
+                        <td>
+                            <div class="cart-info">
+                                <p class="cart-item-size"></p>
+                                <img class="cart-item-img" src="">
+                                <br>
+                                <p class="cart-item-title"></p>
+                                <div>
+                                    <button class="remove-btn">Remove</i></button>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input class="cart-quantity-input" type="number" value="1"></td>
+                        <td>
+                            <select class="cart-item-sizes">
+                                <option value="XS"></option>
+                                <option value="S"></option>
+                                <option value="M"></option>
+                                <option value="L"></option>
+                                <option value="XL"></option>
+                                <option value="XXL"></option>
+                            </select>
+                        </td>
+                        <td class="cart-item-price"></td>
+                    </tr>
+
+                </template>
+
+            </table>
+            <div class="cartItemContainer">
+
+            </div>
+        </div>
+
+
+        <div class="total-price">
+            <table class="total-price-row">
+                <tr>
+                    <td>Total</td>
+                    <td class="cart-total">$89.00</td>
+                </tr>
+            </table>
+        </div>
+        <div class="cartBtn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Contact section (footer)-->
+    <footer class="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="images/RainyDays_Logo.png" alt="">
+
+                <p>Fjelltoppen 13 <br> N-1283 Oslo</p>
+                <p>+47 930 56 667</p>
+                <p>rainy@days.com</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h2>Support</h2>
+                <a href="contact-us.html">
+                    <p>Contact Us</p>
+                </a>
+                <a href="about.html">
+                    <p>About Page</p>
+                </a>
+                <p>Size Guide</p>
+                <p>Shopping & Returns</p>
+                <p>Privacy</p>
+            </div>
+
+            <div class="third-info">
+                <h2>Shop</h2>
+                <p>Men's Shopping</p>
+                <p>Womens's Shopping</p>
+                <p>Camping</p>
+                <p>Ski</p>
+            </div>
+
+            <div class="fourth-info">
+                <h2>Company</h2>
+                <p>About</p>
+                <p>Blog</p>
+                <p>Make It Rain Fund</p>
+            </div>
+
+            <div class="fifth-info">
+                <h2>Join Our Community</h2>
+                <p>Get exclusive offers, Inspiration.</p>
+                <p>view your orders and receipts online</p>
+                <p>be eligible to win prizes every month</p>
+                <p>Sign up for hikes with fellow enthusiasts</p>
+                <img src="images/paymentmethod1.png" alt="">
+            </div>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

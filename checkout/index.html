@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Montserrat:wght@100;200;400;600;700;800;900&family=Poppins:wght@200;300;400;600;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Esteban&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/3ad74a7a32.js" crossorigin="anonymous"></script>
+    <script type="module" src="../script.js"></script>
+</head>
+
+<body>
+
+    <!--Blue navigationbar-->
+    <nav class="navbar-one flex" id="navbar-one">
+        <div class="gradient">
+        </div>
+        <div class="logo flex">
+            <a href="../index.html"><img src="../images/RainyDays_Logo.png"></a>
+        </div>
+    </nav>
+
+    <!--Orange navigationbar-->
+    <nav class="navbar-second flex" id="navbar-second">
+        <div class="nav-links">
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger">
+                <div class="ham-container">
+                    <div class="line" id="active"></div>
+                </div>
+            </label>
+            <ul class="flex">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contact-us.html">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+        <div class="navbar-icons flex">
+            <div class="magnifying-glass">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="user">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
+    </nav>
+
+    <!--Checkout body-->
+
+
+
+    <div class="cart-tab">
+        <div class="list-cart">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Cart</th>
+                        <!-- <th>Quantity</th>
+                        <th>Price</th> -->
+                    </tr>
+                </thead>
+
+                <template id="cart-item-template">
+                    <tr class="cart-item">
+                        <td>
+                            <div class="cart-info">
+                                <img class="cart-item-img" src="">
+                                <br>
+                                <p class="cart-item-title"></p>
+                                <div>
+                                    <button class="remove-btn">Remove</i></button>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input class="cart-quantity-input" type="number" value="1"></td>
+                        <td>
+                            <select class="cart-item-sizes">
+                                <option value="XS"></option>
+                                <option value="S"></option>
+                                <option value="M"></option>
+                                <option value="L"></option>
+                                <option value="XL"></option>
+                                <option value="XXL"></option>
+                            </select>
+                        </td>
+                        <td class="cart-item-price"></td>
+                    </tr>
+
+                </template>
+
+            </table>
+            <div class="cartItemContainer">
+
+            </div>
+        </div>
+
+        <div class="total-price">
+            <table class="total-price-row">
+                <tr>
+                    <td>Total</td>
+                    <td class="cart-total">$00.00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <section class="checkout-page">
+
+
+
+
+        <!-- Shipping Details -->
+        <form class="shipping-details">
+            <h2>Shipping details:</h2>
+            <hr class="under-line">
+            <div class="shipping-choice">
+                <div class="box-1"><i class="fa-solid fa-check"></i> Delivery</div>
+                <div class="box-2">Pick-Up</div>
+            </div>
+
+
+            <input type="text" class="input-field" placeholder="Name" required>
+            <input type="text" class="input-field" placeholder="Last name" required>
+            <input type="text" class="input-field" placeholder="Email" required>
+            <input type="text" class="input-field" placeholder="Phone number" required>
+            <input type="text" class="input-field" placeholder="ZIP CODE" required>
+            <input type="text" class="input-field" placeholder="CITY/TOWN" required>
+            <input type="text" class="input-field" placeholder="State" required>
+            <input type="text" class="input-field" placeholder="Region" required>
+            <input type="text" class="input-field" placeholder="Adress 1" required>
+            <input type="text" class="input-field" placeholder="Adress 2" required>
+
+            <a href="/checkout/confirmation/index.html" onclick="emptyCart()"
+                class="btn">Purchase</a>
+
+        </form>
+
+        <form class="payment-method">
+            <h2>Payment method:</h2>
+            <hr class="under-line">
+            <div class="payment-options">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-apple-pay"></i>
+            </div>
+            <input type="number" class="input-field" placeholder="Card number" required>
+            <input type="number" class="small-field" placeholder="month" required>
+            <input type="number" class="small-field" placeholder="Year" required>
+            <input type="text" class="input-field" placeholder="Cardholder Name" required>
+            <input type="number" class="small-field" placeholder="CVV" required>
+            <p><input type="checkbox"> Join our newsletter and receive exclusive discounts and information about future
+                events!</p>
+
+
+
+        </form>
+
+    </section>
+
+
+
+
+    <!--Contact section (footer)-->
+    <footer class="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="../images/RainyDays_Logo.png" alt="">
+
+                <p>Fjelltoppen 13 <br> N-1283 Oslo</p>
+                <p>+47 930 56 667</p>
+                <p>rainy@days.com</p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h2>Support</h2>
+                <a href="../contact-us.html">
+                    <p>Contact Us</p>
+                </a>
+                <a href="../about.html">
+                    <p>About Page</p>
+                </a>
+                <p>Size Guide</p>
+                <p>Shopping & Returns</p>
+                <p>Privacy</p>
+            </div>
+
+            <div class="third-info">
+                <h2>Shop</h2>
+                <p>Men's Shopping</p>
+                <p>Womens's Shopping</p>
+                <p>Camping</p>
+                <p>Ski</p>
+            </div>
+
+            <div class="fourth-info">
+                <h2>Company</h2>
+                <p>About</p>
+                <p>Blog</p>
+                <p>Make It Rain Fund</p>
+            </div>
+
+            <div class="fifth-info">
+                <h2>Join Our Community</h2>
+                <p>Get exclusive offers, Inspiration.</p>
+                <p>view your orders and receipts online</p>
+                <p>be eligible to win prizes every month</p>
+                <p>Sign up for hikes with fellow enthusiasts</p>
+                <img src="../images/paymentmethod1.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
